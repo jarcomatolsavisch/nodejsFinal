@@ -3,48 +3,49 @@
     <head>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <h1>ClassA</h1>
+    <h1>我的寶可夢</h1>
     <body>
         <div class="content">
-            <form id="add-students-form">
-                <input type="text" name="name" placeholder="輸入 Student's name">
-                <input type="text" name="gender" placeholder="輸入 Student's gender">
-                <input type="text" name="age" placeholder="輸入 Student's age">
-                <button> Add a student </button> 
+            <form id="add-pokemon-form">
+                <input type="text" name="name" placeholder="輸入 寶可夢">
+                <input type="text" name="primaryType" placeholder="輸入 主要屬性">
+                <input type="text" name="secondaryType" placeholder="輸入 次要屬性">
+                <button> 新增 </button> 
             </form>
-            <table id="stu-table" cellpadding="10" border="1" width="100%">
+            <table id="poke-table" cellpadding="10" border="1" width="100%">
                 　<tr>
-                　  <td>姓名</td>
-                　  <td>年齡</td>
-                    <td>性別</td>
+                　  <td>寶可夢</td>
+                　  <td>主要屬性</td>
+                    <td>次要屬性</td>
                 　</tr>
             </table>
         </div>
     </body>
+    
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
     <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-        apiKey: "AIzaSyAqqx2lsK24Rs43O10hT3IRk0Qyce1F3Vs",
-        authDomain: "test-ee527.firebaseapp.com",
-        databaseURL: "https://test-ee527.firebaseio.com",
-        projectId: "test-ee527",
-        storageBucket: "test-ee527.appspot.com",
-        messagingSenderId: "395022467203",
-        appId: "1:395022467203:web:9d3abfda1e87d9213e5bb6",
-        measurementId: "G-E46M9PGXMJ"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    const db = firebase.firestore();
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyD2gfMPZ6Z3efyWJhRHgbxM2NqUyWIpsQU",
+            authDomain: "pokemons-50538.firebaseapp.com",
+            projectId: "pokemons-50538",
+            storageBucket: "pokemons-50538.appspot.com",
+            messagingSenderId: "780850303407",
+            appId: "1:780850303407:web:7b976b9b92c76fe44c5f5a",
+            measurementId: "G-XR3SZZ3VPH"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
     </script>
     <script src="app.js"></script>
 </html>
