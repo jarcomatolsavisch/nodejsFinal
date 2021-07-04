@@ -17,6 +17,6 @@ router.get('/',(req,res)=>{
         root: path.join(__dirname,"../public"),
         dotfiles: 'deny'
     }
-    res.sendFile('index.html',options);
+    res.sendFile('index1.html',options);
 });
 module.exports = router;
