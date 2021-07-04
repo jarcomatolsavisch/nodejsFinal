@@ -13,11 +13,15 @@ router.get('/', (req,res)=>{
         '<a href="/user/master/collection">寶可夢列表</a><br>'
     );
 });
-router.get('/about',(req,res)=>{
-    res.send('greeting');
-});
 //將public的檔案全部丟上來
 router.use(express.static('./public'));
+router.get('/about',(req,res)=>{
+    let options = {
+        root: path.join(__dirname,"../public"),
+        dotfiles: 'deny'
+    };
+    res.sendFile('trainer.html',options);
+});
 router.get('/collection',(req,res)=>{
     let options = {
         root: path.join(__dirname,"../public"),

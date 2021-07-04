@@ -1,22 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <div>
-        <img src="userBar.jpg" width="1000"><br>
-    </div>
-    <div>
-        <img src="ball.png" width="100"><br>
-        <a href="/user/master">我的精靈球</a><br>
-    </div>
-    <div>
-        <img src="pika-icon.png" width="100"><br>
-        <a href="/user/pikachu">皮卡丘的家</a><br>
-    </div>
-    <div>
-        <img src="bulba-icon.png" width="100"><br>
-        <a href="/user/bulbasaur">妙蛙種子的家</a><br>
-    </div>
-    <div>
-        <img src="char-icon.png" width="100"><br>
-        <a href="/user/charmander">小火龍的家</a><br>
-    </div>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+        <style>
+            #slider .item {
+                height: 500px;
+            }
+        </style>
+    </head>
+    
+    <body class="container">
+        <div class="carousel slide" id="slider" data-ride="carousel">
+            <!--顯示輪轉到第幾頁-->
+            <ol class="carousel-indicators">
+                <li class="active" data-slide-to="0" data-target="#slider"></li>
+                <li data-slide-to="1" data-target="#slider"></li>
+                <li data-slide-to="2" data-target="#slider"></li>
+            </ol>
+            <!--輪轉的圖片都在這-->
+            <div class="carousel-inner">
+                <div class="item active" id="slide1">
+                    <img src="./pikaMovie.jpg" width="100%"/>
+                    <div class="carousel-caption">
+                        <h4>第一張投影片</h4>
+                    </div>
+                </div>
+                <div class="item" id="slide2">
+                    <img src="./bulbaMovie.jpg" width="100%"/>
+                    <div class="carousel-caption">
+                        <h4>第二張投影片</h4>
+                    </div>
+                </div>
+                <div class="item" id="slide3">
+                    <img src="./charMovie.jpg" width="100%"/>
+                    <div class="carousel-caption">
+                        <h4>第三張投影片</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#slider" data-slide="prev" role="button">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#slider" data-slide="next" role="button">
+                <span class="icon-next"></span>
+            </a>
+        </div><!--END CAROUSEL-->
+        <div class="row">
+            <div class="col-md-3 bg-info text-center" >
+                <img src="ball.png" width="100"><br>
+                <a href="/user/master">我的精靈球</a><br>
+            </div>
+            <div class="col-md-3 bg-warning text-center">
+                <img src="pika-icon.png" width="100"><br>
+                <a href="/user/pikachu">皮卡丘的家</a><br>
+            </div>
+            <div class="col-md-3 bg-success text-center">
+                <img src="bulba-icon.png" width="100"><br>
+                <a href="/user/bulbasaur">妙蛙種子的家</a><br>
+            </div>
+            <div class="col-md-3 bg-danger text-center">
+                <img src="char-icon.png" width="100"><br>
+                <a href="/user/charmander">小火龍的家</a><br>
+            </div>
+        </div>
+    </body>
 </html>
