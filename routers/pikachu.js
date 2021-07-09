@@ -17,7 +17,7 @@ router.get('/',(req,res)=>{
 //所以我在最開始的時候將public資料夾設為static
 //讓瀏覽器拿到pikachu.html之後可以去public獲取圖片
 //----------OPTION2---------------
-router.use(express.static('./public'));
+//router.use(express.static('./public'));
 router.get('/about',(req,res)=>{
     let options = {
         //__dirname存的是目前pikachu.js所存在的檔案夾
